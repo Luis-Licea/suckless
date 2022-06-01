@@ -1,0 +1,9 @@
+[submodule "dwm"]
+	path = dwm
+	url = https://github.com/Luis-Licea/dwm
+[submodule "st"]
+	path = st
+	url = https://github.com/Luis-Licea/st
+[submodule "dmenu"]
+	path = dmenu
+	url = https://github.com/Luis-Licea/dmenu
