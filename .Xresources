@@ -1,0 +1,38 @@
+! NOTE: Always run "xrdb -merge ~/.Xresources" to apply changes.
+
+! Run xrandr to get resolution. Use resolution to calculate DPI using
+! https://www.calculators.tech/dpi-calculator. Display: 1920x1080 24 inch.
+! Xft.dpi: 92
+
+! Transparency (0-1):
+st.alpha: 0.92
+st.alphaOffset: 0.3
+
+! Set a default font and font size as below:
+! st.font: Monospace-11;
+st.font: MesloLGS NF-12;
+
+! st.termname: st-256color
+! Margin size around terminal.
+st.borderpx: 20
+
+! Brogrammer theme:
+*.foreground:  #d6dbe5
+*.background:  #131313
+*.color0:      #1f1f1f
+*.color8:      #d6dbe5
+*.color1:      #f81118
+*.color9:      #de352e
+*.color2:      #2dc55e
+*.color10:     #1dd361
+*.color3:      #ecba0f
+*.color11:     #f3bd09
+*.color4:      #2a84d2
+*.color12:     #1081d6
+*.color5:      #4e5ab7
+*.color13:     #5350b9
+*.color6:      #1081d6
+*.color14:     #0f7ddb
+*.color7:      #d6dbe5
+*.color15:     #ffffff
+*.colorBD:     #d6dbe5

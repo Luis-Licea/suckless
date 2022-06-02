@@ -1,2 +1,4 @@
 # CCLS cache.
 .ccls-cache
+# Ignore scratchpad.
+scratchpad.sh
