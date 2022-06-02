@@ -35,15 +35,18 @@ install_suckless() {
 }
 
 install_picom() {
+    # Define picom package to install.
+    picom='picom-jonaburg-git'
+
     # Get picom version.
-    picom_is_installed=$(pacman -Q picom)
+    picom_is_installed=$(pacman -Q $picom)
 
     # Install picom compositor if it is not installed.
     if [[ "$picom_is_installed" ]]; then
         echo "$picom_is_installed is installed."
     else
         echo "Installing picom."
-        sudo pacman -S picom
+        yaourt -S $picom
 
         echo "Creating picom config folder."
         picom_config_dir=~/.config/picom
@@ -52,6 +55,9 @@ install_picom() {
         echo "Creating config file links."
         picom_config=picom.conf
         ln $picom_config $picom_config_dir/$picom_config
+
+        echo "Running picom"
+        picom --experimental-backends -b
     fi
 }
 
