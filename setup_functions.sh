@@ -57,13 +57,51 @@ install_picom() {
         ln $picom_config $picom_config_dir/$picom_config
 
         echo "Running picom"
-        picom --experimental-backends -b
+        picom -b
     fi
 }
 
+install nowater() {
+    # Install nowater wallpaper manager.
+    yaourt -S nowater
+}
+
+arch_install=(
+    feh # Image viewer and background image setter.
+    picom # Needed to enable window transparency.
+    nowater # A CLI tool that sets wallpapers or live wallpapers.
+)
+
+
+install_wallpapers() {
+
+    # List of wallpapers to install.
+    wallpapers=(
+        # cutetifsh-wallpapers
+        # elementary-wallpapers
+        # ukui-wallpapers
+        nordic-wallpapers # saved in /usr/share/backgrounds/nordic-wallpapers/
+    )
+
+    # Install every wallpaper package.
+    for wallpaper in "${wallpapers[@]}"; do
+        # Get wallpaper version.
+        wallpaper_is_installed=$(pacman -Q $wallpaper)
+
+        # Install wallpaper if it is not installed.
+        if [[ "$wallpaper_is_installed" ]]; then
+            echo "$wallpaper is installed."
+        else
+            echo "Installing wallpaper."
+            yaourt -S "$wallpaper"
+        fi
+    done
+
+}
 # Install everything.
 setup() {
     install_suckless
     emplace_session
+    install_nowater
     install_picom
 }
