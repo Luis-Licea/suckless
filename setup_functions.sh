@@ -66,10 +66,13 @@ install nowater() {
     yaourt -S nowater
 }
 
-arch_install=(
-    feh # Image viewer and background image setter.
-    picom # Needed to enable window transparency.
-    nowater # A CLI tool that sets wallpapers or live wallpapers.
+install=(
+    feh                 # Image viewer and background image setter.
+    picom-jonaburg-git  # Needed to enable window transparency.
+    nowater             # A CLI tool that sets wallpapers or live wallpapers.
+    xorg-xev            # Print contents of X events such as key codes.
+    dunst               # Customizable and lightweight notification-daemon
+
 )
 
 
