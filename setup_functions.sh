@@ -5,16 +5,14 @@
 emplace_session() {
     XSESSIONS='/usr/share/xsessions'
     xsession_file='dwm.desktop'
-    xsession_config='.xsession'
-    xsession_resources='.Xresources'
 
     echo "Creating config links."
     ln $xsession_file $XSESSIONS/$xsession_file
-    ln $xsession_config ~/$xsession_config
-    ln $xsession_resources ~/$xsession_resources
 
     echo "Applying the resource settings."
-    xrdb -merge ~/.Xresources
+    if [ -f "$HOME/.Xresources" ]; then
+        xrdb -merge ~/.Xresources
+    fi
 }
 
 # The profile file contains custom path entries such as .local/bin needed by
@@ -58,7 +56,7 @@ install_picom() {
     fi
 }
 
-install nowater() {
+install_nowater() {
     # Install nowater wallpaper manager.
     yaourt -S nowater
 }
@@ -76,16 +74,13 @@ install_wallpapers() {
 
     # List of wallpapers to install.
     wallpapers=(
-        # cutetifsh-wallpapers
-        # elementary-wallpapers
-        # ukui-wallpapers
         nordic-wallpapers # saved in /usr/share/backgrounds/nordic-wallpapers/
     )
 
     # Install every wallpaper package.
     for wallpaper in "${wallpapers[@]}"; do
         # Get wallpaper version.
-        wallpaper_is_installed=$(pacman -Q $wallpaper)
+        wallpaper_is_installed=$(pacman -Q "$wallpaper")
 
         # Install wallpaper if it is not installed.
         if [[ "$wallpaper_is_installed" ]]; then
@@ -97,6 +92,7 @@ install_wallpapers() {
     done
 
 }
+
 # Install everything.
 setup() {
     install_suckless
@@ -105,3 +101,33 @@ setup() {
     install_nowater
     install_picom
 }
+
+check_differences() {
+
+    # Create an associative array of files and their respective
+    # paths.
+    declare -A file2path
+    file2path[dwm.desktop]=/usr/share/xsessions/dwm.desktop
+    file2path[profile]=/etc/profile
+
+    # Iterate thru every file.
+    for file in "${!file2path[@]}"; do
+        # Store differences between the files.
+        differences=$(diff "$file" "${file2path[$file]}")
+
+        # If file already exists and the files are not different:
+        if [ -f "${file2path[$file]}" ] && ! [ "$differences" ]; then
+            echo "$file exists and is up to date."
+
+            # Create soft link; ask before replacing existing file.
+            ln --interactive "$file" "${file2path[$file]}"
+            echo "$HOME/$file link set."
+
+        elif [ "$differences" ]; then
+            echo "${file2path[$file]} exists, but incoming file (top) differs from existing one (bottom)"
+            echo "$differences"
+        fi
+    done
+}
+
+check_differences
