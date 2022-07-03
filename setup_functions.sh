@@ -17,6 +17,14 @@ emplace_session() {
     xrdb -merge ~/.Xresources
 }
 
+# The profile file contains custom path entries such as .local/bin needed by
+# dmenu. These path entries cannot be easily added to /etc/environment and do
+# not work for dmenu when they are added to .bashrc or .zshrc.
+emplace_profile() {
+    echo "Creating profile links."
+    sudo ln profile /etc/profile
+}
+
 # Install all the suckless programs.
 install_suckless() {
     # Suckless directories.
@@ -47,17 +55,6 @@ install_picom() {
     else
         echo "Installing picom."
         yaourt -S $picom
-
-        echo "Creating picom config folder."
-        picom_config_dir=~/.config/picom
-        mkdir "$picom_config_dir"
-
-        echo "Creating config file links."
-        picom_config=picom.conf
-        ln $picom_config $picom_config_dir/$picom_config
-
-        echo "Running picom"
-        picom -b
     fi
 }
 
@@ -72,7 +69,6 @@ install=(
     nowater             # A CLI tool that sets wallpapers or live wallpapers.
     xorg-xev            # Print contents of X events such as key codes.
     dunst               # Customizable and lightweight notification-daemon
-
 )
 
 
@@ -105,6 +101,7 @@ install_wallpapers() {
 setup() {
     install_suckless
     emplace_session
+    emplace_profile
     install_nowater
     install_picom
 }
