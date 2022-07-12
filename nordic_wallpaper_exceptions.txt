@@ -313,3 +313,9 @@ waves.jpg
 wild.png
 windows-panic.png
 windows-panic.pngAbstract-Nord.png
+ign_starWarsThing.png
+keyboard.png
+Minimal-Nord.png
+nord_space.png
+pixelmoon.png
+prime-number-spiral.png
