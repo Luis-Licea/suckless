@@ -4,14 +4,19 @@
 # the list of sessions, and to configure the DWM X session.
 emplace_session() {
     XSESSIONS='/usr/share/xsessions'
+    WAYSESSIONS='/usr/share/wayland-sessions'
     xsession_file='dwm.desktop'
+    waysession_file='dwl.desktop'
 
-    echo "Creating config links."
-    ln $xsession_file $XSESSIONS/$xsession_file
+    echo "Creating X session links."
+    ln "$xsession_file" "$XSESSIONS/$xsession_file"
+
+    echo "Creating Wayland session links."
+    ln "$waysession_file" "$WAYSESSIONS/$waysession_file"
 
     echo "Applying the resource settings."
     if [ -f "$HOME/.Xresources" ]; then
-        xrdb -merge ~/.Xresources
+        xrdb -merge /.Xresources
     fi
 }
 

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Dwl
+Comment=Dynamic window manager
+Exec=/home/luis/.config/dwl/init.sh
+Icon=dwl
+Type=Application
+
