@@ -10,3 +10,6 @@
 [submodule "slstatus"]
 	path = slstatus
 	url = https://github.com/Luis-Licea/slstatus
+[submodule "dwl"]
+	path = dwl
+	url = https://github.com/Luis-Licea/dwl
