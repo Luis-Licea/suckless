@@ -20,8 +20,10 @@ FormulaOne_Vettel_1.jpg
 FormulaOne_Vettel_1.jpg
 FormulaOne_Vettel_2.jpg
 FormulaOne_Vettel_2.jpg
+Minimal-Nord.png
 Nordic-Heroin.png
 Nordic-Heroin.png
+archlinux.png
 arctic-landscape.png
 at_the_coffeshop.png
 audio-bunny.png
@@ -29,6 +31,9 @@ chemical_nord.png
 container_ship.png
 container_ship.png
 cpu_city.png
+debian-galaxy.png
+debian.png
+earth-in-space.png
 elementaryos.png
 elementaryos.png
 fedora.png
@@ -38,6 +43,7 @@ gnu-linux.png
 ign-0000.png
 ign-0001.png
 ign-0002.png
+ign-0003.png
 ign-0008.png
 ign-0009.png
 ign-0011.png
@@ -48,11 +54,13 @@ ign_access_control.png
 ign_anime-girls-with-gun.png
 ign_anime-girls-with-gun.png
 ign_anime-girls.png
+ign_animeGirlSleeping.png
 ign_archie.png
 ign_archie.png
 ign_astronaut.png
 ign_astronautInTheOcean.png
 ign_astronautInTheOcean.png
+ign_batman.png
 ign_beyondHillAndDale.jpg
 ign_black.jpg
 ign_blue_chains.png
@@ -138,6 +146,7 @@ ign_soupKong.png
 ign_spiderman.jpg
 ign_spiral.jpg
 ign_starWars.jpg
+ign_starWarsThing.png
 ign_straw_hat_pirates.png
 ign_straw_hat_pirates.png
 ign_street-crossing.png
@@ -154,6 +163,7 @@ ign_unicorn.png
 ign_unicorn.png
 ign_unsplash1.png
 ign_unsplash1.png
+ign_unsplash10.png
 ign_unsplash11.png
 ign_unsplash11.png
 ign_unsplash12.png
@@ -233,6 +243,7 @@ ign_unsplash6.png
 ign_unsplash7.png
 ign_unsplash8.png
 ign_unsplash8.png
+ign_unsplash9.png
 ign_vader.png
 ign_vader.png
 ign_vaporWave.png
@@ -251,6 +262,7 @@ ign_yayayayayaya.png
 ign_yayayayayaya.png
 ign_zorin.png
 ign_zorin.png
+keyboard.png
 kittyboard.png
 kittyboard.png
 linux-be-good-4k.png
@@ -264,6 +276,7 @@ linux-tux.png
 misty_mountains.jpg
 mountain_jaws.jpg
 murky_peaks.jpg
+nixos.png
 nord-arctic-fox.png
 nord_alone_tree.png
 nord_bridge.png
@@ -279,6 +292,7 @@ nord_roads.png
 nord_roads.png
 nord_scenary.png
 nord_scenary.png
+nord_space.png
 nord_triangles.png
 nord_valley.png
 nordic-obsession.png
@@ -291,8 +305,10 @@ opensuse.png
 opensuse.png
 pixelcity.png
 pixelcity.png
+pixelmoon.png
 plan9.png
 plan9.png
+prime-number-spiral.png
 rocket.png
 rocket.png
 slackware.png
@@ -304,6 +320,7 @@ street_blues.png
 subtle_ferns.jpg
 ubuntu-aurora.png
 ubuntu-aurora.png
+ubuntu-frost.png
 underwater.png
 voidlinux-01.png
 voidlinux-01.png
@@ -313,9 +330,3 @@ waves.jpg
 wild.png
 windows-panic.png
 windows-panic.pngAbstract-Nord.png
-ign_starWarsThing.png
-keyboard.png
-Minimal-Nord.png
-nord_space.png
-pixelmoon.png
-prime-number-spiral.png

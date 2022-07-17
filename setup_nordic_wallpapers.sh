@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
 
+# Dependencies:
+# 1) The package `nordic-wallpapers` must be installed in
+#    /usr/share/backgrounds/nordic-wallpapers/.
+# 2) The file `nordic_wallpaper_exceptions.txt` must exist.
+
 # Source folder.
 wallpaper_dir=/usr/share/backgrounds/nordic-wallpapers
-  Destination folder.
+# Destination folder.
 wallpaper_exceptions_dir="$wallpaper_dir"-exceptions
 # File with wallpapers to move to exceptions folder.
 exceptions_file=nordic_wallpaper_exceptions.txt
