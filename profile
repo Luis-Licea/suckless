@@ -54,24 +54,27 @@ export XDG_RUNTIME_DIR="/run/user/$UID"
 ################################################################################
 
 # [ruby bundler]: $HOME/.bundle
-export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME/bundle"
 export BUNDLE_USER_CACHE="$XDG_CACHE_HOME/bundle"
+export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME/bundle"
 export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME/bundle"
-
-# [bash]: ${HOME}/.bash_history
-export HISTFILE="$XDG_STATE_HOME/bash/history"
 
 # [cargo]: $HOME/.cargo
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 
+# [sagemath]: $HOME/.sage
+export DOT_SAGE="$XDG_CONFIG_HOME/sage"
+
 # [gnupg]: $HOME/.gnupg
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 
-# [gnu-screen]: $HOME/.screenrc
-export SCREENRC="$XDG_CONFIG_HOME/screen/screenrc"
+# [gradle]: $HOME/.gradle
+export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
 
 # [gtk-2]: $HOME/.gtkrc-2.0
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
+
+# [bash]: ${HOME}/.bash_history
+export HISTFILE="$XDG_STATE_HOME/bash/history"
 
 # [kde]: $HOME/.kde4
 export KDEHOME="$XDG_CONFIG_HOME/kde"
@@ -85,11 +88,26 @@ export MOST_INITFILE="$XDG_CONFIG_HOME/mostrc"
 # [nodejs]: $HOME/.node_repl_history
 export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
 
+# [npm]: $HOME/.npmrc
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+
 # [pass]: $HOME/.password-store
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass"
 
+# [rustup]: $HOME/.rustup
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+
+# [gnu-screen]: $HOME/.screenrc
+export SCREENRC="$XDG_CONFIG_HOME/screen/screenrc"
+
+# [sqlite]: $HOME/.sqlite_history
+export SQLITE_HISTORY="$XDG_CACHE_HOME/sqlite_history"
+
 # [texmf]: $HOME/.texlive/texmf-var
 export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
+
+# [volta]: $HOME/.volta
+export VOLTA_HOME="$XDG_DATA_HOME/volta"
 
 ################################################################################
 # Custom exports.
@@ -118,6 +136,12 @@ append_path () {
 append_path '/usr/local/sbin'
 append_path '/usr/local/bin'
 append_path '/usr/bin'
+
+# Personal scripts.
+append_path "$HOME/.local/bin/scripts"
+
+# Add Volta executable to path.
+append_path "$VOLTA_HOME/bin:$PATH"
 
 # Make Python modules executable. Needed by cppman.
 append_path "$HOME/.local/bin"
