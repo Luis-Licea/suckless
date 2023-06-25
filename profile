@@ -53,6 +53,15 @@ export XDG_RUNTIME_DIR="/run/user/$UID"
 # XDG-Ninja
 ################################################################################
 
+# [openjdk]: $HOME/.java
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
+
+# [android-studio]: $HOME/.android
+export ANDROID_HOME="$XDG_DATA_HOME/android"
+
+# [ansible]: $HOME/.ansible
+export ANSIBLE_HOME="$XDG_CONFIG_HOME/ansible"
+
 # [ruby bundler]: $HOME/.bundle
 export BUNDLE_USER_CACHE="$XDG_CACHE_HOME/bundle"
 export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME/bundle"
@@ -76,6 +85,9 @@ export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 # [bash]: ${HOME}/.bash_history
 export HISTFILE="$XDG_STATE_HOME/bash/history"
 
+# [jupyter]: $HOME/.jupyter
+export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
+
 # [kde]: $HOME/.kde4
 export KDEHOME="$XDG_CONFIG_HOME/kde"
 
@@ -91,8 +103,14 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
 # [npm]: $HOME/.npmrc
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 
+# [nvm]: $HOME/.nvm
+export NVM_DIR="$XDG_DATA_HOME/nvm"
+
 # [pass]: $HOME/.password-store
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass"
+
+# [python]: $HOME/.python_history
+export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
 
 # [rustup]: $HOME/.rustup
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
@@ -106,8 +124,14 @@ export SQLITE_HISTORY="$XDG_CACHE_HOME/sqlite_history"
 # [texmf]: $HOME/.texlive/texmf-var
 export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
 
+# [xorg]: $HOME/.xsession
+export USERXSESSION="$XDG_CONFIG_HOME/X11/xsession"
+
 # [volta]: $HOME/.volta
 export VOLTA_HOME="$XDG_DATA_HOME/volta"
+
+# [zsh]: $HOME/.zshrc
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
 ################################################################################
 # Custom exports.
