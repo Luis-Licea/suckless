@@ -83,7 +83,7 @@ export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 
 # [bash]: ${HOME}/.bash_history
-export HISTFILE="$XDG_STATE_HOME/bash/history"
+export HISTFILE="/tmp/bash_history"
 
 # [jupyter]: $HOME/.jupyter
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
@@ -92,13 +92,13 @@ export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export KDEHOME="$XDG_CONFIG_HOME/kde"
 
 # [less]: ${HOME}/.lesshst
-export LESSHISTFILE="$XDG_CACHE_HOME/less/history"
+export LESSHISTFILE="/tmp/less_history"
 
 # [most]: $HOME/.mostrc
 export MOST_INITFILE="$XDG_CONFIG_HOME/mostrc"
 
 # [nodejs]: $HOME/.node_repl_history
-export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
+export NODE_REPL_HISTORY="/tmp/node_repl_history"
 
 # [npm]: $HOME/.npmrc
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
@@ -119,7 +119,7 @@ export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export SCREENRC="$XDG_CONFIG_HOME/screen/screenrc"
 
 # [sqlite]: $HOME/.sqlite_history
-export SQLITE_HISTORY="$XDG_CACHE_HOME/sqlite_history"
+export SQLITE_HISTORY="/tmp/sqlite_history"
 
 # [texmf]: $HOME/.texlive/texmf-var
 export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
@@ -184,4 +184,3 @@ unset -f append_path
 
 # Force PATH to be environment
 export PATH
-
